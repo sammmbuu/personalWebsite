@@ -3,7 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Sam Hearn</title>
-    <link type="css" href="syling.ccs">
+    <style>
+        #heading {
+            width: 100%;
+            background-color: #d9d9d9;
+            border-bottom: 7px groove #c0c0c0;
+            position: fixed;
+            height: 60px;
+        }
+        header a {
+            color: #009933;
+            text-decoration: none;
+            margin-left: auto;
+            
+        }
+        header nav {
+            float: right;
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            font-size: 1.5em;
+            padding-right: 20px;
+        }
+        header a:hover {
+            color: #145214;
+        }
+        header h1{
+            position: relative;
+            padding-left: 50px;
+            margin-top: 13px;
+        }
+        footer {
+            background-color: #d9d9d9;
+            border-top: 7px groove #c0c0c0;
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            height: 18%;
+        }
+        footer h1{
+            font-size: 20px;
+            color: #009933;
+            text-align: center;
+            
+            
+        }
+        footer p{
+            font-size: 12px;
+            color: #145214;
+            margin-top: 0px;
+            
+        }
+        .about {
+            position: absolute;
+                left: 10px;
+            width: 33%;
+        }
+        .contact {
+            position: absolute;
+                right: 10px;
+            width: 30%;
+            text-align: center;
+            
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -15,12 +78,22 @@
             </a>
         </hgroup>
         <nav>
-            <a href="about me url">About</a>
+            <a href="#about" id="about">About</a>
             <a href="resume url">Resume</a>
             <!--More links?-->
         </nav>
     </div>
 </header>
 
-
+<footer>
+    <section id="about" class="about">
+        <h1>Get to know me!</h1>
+        <p>Insert information about myself. It is awesome information and I am simply filling up space to simulate what it will actually be like.  So This is cool.</p>
+    </section>
+    <section class="contact">
+        <h1>Contact</h1>
+        <p>Email: samhearn2010@gmail.com</p>
+        <p>Phone: 817-919-0894</p>
+    </section>
+</footer>
 </body>
