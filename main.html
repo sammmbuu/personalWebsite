@@ -14,26 +14,57 @@
             left: 0;
             right: 0;
         }
+        header hgroup {
+            margin-left: 50px;
+            margin-top: -8px;
+        }
         header a {
             color: #009933;
             text-decoration: none;
             margin-left: auto;
             
         }
-        header nav {
-            position: absolute;
-            top: 20px;
-            right: 10px;
-            font-size: 1.5em;
-            padding-right: 20px;
-        }
+        
         header a:hover {
             color: #145214;
         }
-        header h1{
+        
+        #tabs {
+            position: absolute;
+            right: 0px;
+            top: 80px;
+            width: 33%;
+            height: 800px;
+            overflow: hidden;
+        }
+        
+        #tabs article {
+            border-top: 10px ridge #d9d9d9;
+            border-left: 10px ridge #d9d9d9;
+            border-bottom: 10px ridge #d9d9d9;
+            border-radius: 15px 50px;
+            height: 30px;
+            width: 100%;
             position: relative;
-            padding-left: 50px;
-            margin-top: 13px;
+            margin-top: 20px;
+            right: -80%;
+            transition: right 1s ease-in 0s;
+            
+        }
+        
+        #tabs article h3 {
+            position: absolute;
+            top: -15px;
+            left: 30px;
+        }
+        
+        #tabs article a{
+            color: #009933;
+            text-decoration: none;
+        }
+        
+        #tabs article:hover{
+            right: -20px;
         }
         
         footer {
@@ -43,7 +74,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            height: 150px;
+            height: 100px;
         }
         footer h1{
             font-size: 20px;
@@ -58,15 +89,12 @@
             margin-top: 0px;
             
         }
-        .about {
-            position: absolute;
-                left: 10px;
-            width: 33%;
-        }
+    
         .contact {
             position: absolute;
-                right: 10px;
-            width: 30%;
+                top: -10px;
+                right: 0;
+                left: 0;
             text-align: center;
             
         }
@@ -81,20 +109,40 @@
                 <h1>Sam Hearn</h1>
             </a>
         </hgroup>
-        <nav>
-            <a href="#about">About</a>
-            <a href="resume url">Resume</a>
-            <!--More links?-->
-        </nav>
     </div>
 </header>
-<h2>what is going on</h2>
+<div id="tabs">
+    <article>
+            <h3>
+                <a href="whatever url">
+                This will be content
+                </a>
+            </h3>
+    </article>
+    <article>
+            <h3>
+                <a href="whatever url">
+                This will be content
+                </a>
+            </h3>
+    </article>
+    <article>
+            <h3>
+                <a href="whatever url">
+                This will be content
+                </a>
+            </h3>
+    </article>
+    <article>
+            <h3>
+                <a href="whatever url">
+                This will be content
+                </a>
+            </h3>
+    </article>
+</div>
 
 <footer>
-    <section id="about" class="about">
-        <h1>Get to know me!</h1>
-        <p>Insert information about myself. It is awesome information and I am simply filling up space to simulate what it will actually be like.  So This is cool.</p>
-    </section>
     <section class="contact">
         <h1>Contact</h1>
         <p>Email: samhearn2010@gmail.com</p>
