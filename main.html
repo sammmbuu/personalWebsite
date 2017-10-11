@@ -50,6 +50,7 @@
             right: -80%;
             transition: right 1s ease-in 0s;
             background-color: #e6e6e6;
+            overflow: hidden;
             
         }
         
@@ -66,6 +67,7 @@
             font-weight: bold;
             font-size: 1em;
             font-family: serif;
+           
         }
         
         #tabs button:hover {
@@ -108,6 +110,24 @@
         #aboutMe p {
             margin-left: 20px;
             margin-right: 20px;
+            font-family: monospace;
+        }
+        
+        .close {
+            background-color: #e6e6e6;
+            border: none;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        
+        .close:hover{
+            cursor: pointer;
+        }
+        
+        .close:focus{
+            outline: none;
+            
         }
         
         #aboutMe {
@@ -193,6 +213,7 @@
     <p>This is some sample content with a lot of stuff to say don't you know!
     Lets just see if it actually works the way I intended it to.  That would be
      awesome.</p>
+     <button type="button" class="close" id="aboutClose">x</button>
 </div>
 <footer>
     <section class="contact">
@@ -203,12 +224,18 @@
 </footer>
 
 <script>
-
     //about me buttons toggle view
     var aboutMe = document.getElementById("aboutMe");
     var aboutMeButton = document.getElementById("aboutMeButton");
     aboutMeButton.addEventListener("click", function(){
         aboutMe.style.display="initial";
     });
+    
+    //close about me
+    var closeAbout = document.getElementById("aboutClose");
+    closeAbout.addEventListener("click", function(){
+        aboutMe.style.display="none";
+    });
+    
 </script>
 </body>
