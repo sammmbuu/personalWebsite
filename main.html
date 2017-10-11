@@ -5,6 +5,11 @@
     <title>Sam Hearn</title>
     <style>
         
+        #backgroundPic {
+            opacity: .4;
+            height: 100%;
+            z-index: -1;
+        }
         header {
             background-color: #d9d9d9;
             border-bottom: 7px groove #c0c0c0;
@@ -14,10 +19,7 @@
             left: 0;
             right: 0;
         }
-        header hgroup {
-            margin-left: 50px;
-            margin-top: -8px;
-        }
+        
         header a {
             color: #009933;
             text-decoration: none;
@@ -27,6 +29,28 @@
         
         header a:hover {
             color: #145214;
+        }
+        
+        #heading {
+            position: absolute;
+            top: 10px;
+            width: 400px;
+            
+        }
+        
+        header h1 {
+            position: absolute;
+            left: 80px;
+            top: -17px;
+            
+        }
+        #me {
+            border-radius: 50%;
+            width: 40px;
+            position: absolute;
+            left: 30px;
+            top: 2px;
+            
         }
         
         #tabs {
@@ -168,14 +192,15 @@
     </style>
 </head>
 <body>
+
+<img id="backgroundPic" src="https://wallpapercave.com/wp/piyAWng.jpg">
+
 <header>
     <div id="heading">
-        <hgroup>
             <a href="my url">
-                <!-- small circular image of face-->
+                <img id="me" src="https://lh5.googleusercontent.com/-UpypO2SAklE/AAAAAAAAAAI/AAAAAAAAAAA/IQ6RTvmPdr8/s128-c-k/photo.jpg">
                 <h1>Sam Hearn</h1>
             </a>
-        </hgroup>
     </div>
 </header>
 <div id="tabs">
