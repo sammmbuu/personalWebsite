@@ -8,7 +8,12 @@
         #backgroundPic {
             opacity: .4;
             height: 100%;
+            margin-left: -20px;
             z-index: -1;
+        }
+        
+        body {
+            overflow: hidden;
         }
         header {
             background-color: #d9d9d9;
@@ -71,7 +76,7 @@
             width: 100%;
             position: relative;
             margin-top: 40px;
-            right: -80%;
+            right: -60%;
             transition: right 1s ease-in 0s;
             background-color: #e6e6e6;
             overflow: hidden;
@@ -111,7 +116,7 @@
             right: -20px;
         }
         
-        #aboutMe {
+        .infoPop {
             position: absolute;
             left: 40px;
             top: 20%;
@@ -120,9 +125,10 @@
             border: 5px groove #d9d9d9;
             background-color: #e6e6e6;
             border-radius: 30px;
+            opacity: 1;
         }
         
-        #aboutMe h4{
+        .infoPop h4{
             color: #145214;  
             text-align: center;
             margin-left: 10px;
@@ -131,30 +137,40 @@
             font-weight: bold;
         }
         
-        #aboutMe p {
+        .infoPop p {
             margin-left: 20px;
             margin-right: 20px;
             font-family: monospace;
         }
         
-        .close {
-            background-color: #e6e6e6;
-            border: none;
-            position: absolute;
-            right: 10px;
-            top: 10px;
-        }
-        
-        .close:hover{
-            cursor: pointer;
-        }
-        
-        .close:focus{
-            outline: none;
+        /*close button on pop ups*/
+            .close {
+                background-color: #e6e6e6;
+                border: none;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
             
-        }
+            .close:hover{
+                cursor: pointer;
+            }
+            
+            .close:focus{
+                outline: none;
+                
+            }
         
         #aboutMe {
+            display: none;
+        }
+        #resume {
+            display: none;
+        }
+        #brickGame {
+            display: none;
+        }
+        #mods {
             display: none;
         }
         
@@ -213,33 +229,50 @@
     </article>
     <article>
             <h3>
-                <a href="whatever url">
+                <button id="resumeButton" type="button">
                 Resume (download)
                 </a>
             </h3>
     </article>
     <article>
             <h3>
-                <a href="whatever url">
+                <button id="brickGameButton" type="button">
                 Brick Game (to be completed)
                 </a>
             </h3>
     </article>
     <article>
             <h3>
-                <a href="whatever url">
+                <button id="modsButton" type="button">
                 Stardew Valley Mod (to be completed)
                 </a>
             </h3>
     </article>
 </div>
-<div id="aboutMe">
+
+<div id="aboutMe" class="infoPop">
     <h4>This is a sample title</h4>
     <p>This is some sample content with a lot of stuff to say don't you know!
     Lets just see if it actually works the way I intended it to.  That would be
      awesome.</p>
      <button type="button" class="close" id="aboutClose">x</button>
 </div>
+<div id="resume" class="infoPop">
+    <h4>Resume</h4>
+    <p>Info about Resume</p>
+    <button type="button" class="close" id="resumeClose">x</button>
+</div>
+<div id="brickGame" class="infoPop">
+    <h4>Brick Game</h4>
+    <p>Brick Game information</p>
+    <button type="button" class="close" id="brickGameClose">x</button>
+</div>
+<div id="mods" class="infoPop">
+    <h4>Mods</h4>
+    <p>Mods I've made</p>
+    <button type="button" class="close" id="modsClose">x</button>
+</div>
+
 <footer>
     <section class="contact">
         <h1>Contact</h1>
@@ -251,16 +284,62 @@
 <script>
     //about me buttons toggle view
     var aboutMe = document.getElementById("aboutMe");
+    var resume = document.getElementById("resume");
+    var brickGame = document.getElementById("brickGame");
+    var mods = document.getElementById("mods");
+    
+    var info = [aboutMe, resume, brickGame, mods];
+    
     var aboutMeButton = document.getElementById("aboutMeButton");
+    var resumeButton = document.getElementById("resumeButton");
+    var brickGameButton = document.getElementById("brickGameButton");
+    var modsButton = document.getElementById("modsButton");
+    
     aboutMeButton.addEventListener("click", function(){
+        for (var i = 0; i < info.length; i++) {
+            info[i].style.display="none";
+        }
         aboutMe.style.display="initial";
+        
+    });
+    resumeButton.addEventListener("click", function(){
+        for (var i = 0; i < info.length; i++) {
+            info[i].style.display="none";
+        }
+        resume.style.display="initial";
+    });
+    brickGameButton.addEventListener("click", function(){
+        for (var i = 0; i < info.length; i++) {
+            info[i].style.display="none";
+        }
+        brickGame.style.display="initial";
+        
+    });
+    modsButton.addEventListener("click", function(){
+        for (var i = 0; i < info.length; i++) {
+            info[i].style.display="none";
+        }
+        mods.style.display="initial";
+        
     });
     
     //close about me
-    var closeAbout = document.getElementById("aboutClose");
-    closeAbout.addEventListener("click", function(){
-        aboutMe.style.display="none";
-    });
+        var aboutClose = document.getElementById("aboutClose");
+            aboutClose.addEventListener("click", function(){
+                aboutMe.style.display="none";
+            });
+        var resumeClose = document.getElementById("resumeClose");
+            resumeClose.addEventListener("click", function(){
+                resume.style.display="none";
+            });
+        var brickGameClose = document.getElementById("brickGameClose");
+            brickGameClose.addEventListener("click", function(){
+                brickGame.style.display="none";
+            });
+        var modsClose = document.getElementById("modsClose");
+            modsClose.addEventListener("click", function(){
+                mods.style.display="none";
+            });
     
 </script>
 </body>
