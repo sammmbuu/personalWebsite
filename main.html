@@ -143,6 +143,9 @@
             font-family: monospace;
         }
         
+        #resumeLink:hover {
+            cursor: pointer;
+        }
         /*close button on pop ups*/
             .close {
                 background-color: #e6e6e6;
@@ -230,28 +233,28 @@
     <article>
             <h3>
                 <button id="resumeButton" type="button">
-                Resume (download)
+                Resume
                 </a>
             </h3>
     </article>
     <article>
             <h3>
                 <button id="brickGameButton" type="button">
-                Brick Game (to be completed)
+                Brick Game
                 </a>
             </h3>
     </article>
     <article>
             <h3>
                 <button id="modsButton" type="button">
-                Stardew Valley Mod (to be completed)
+                Mods
                 </a>
             </h3>
     </article>
 </div>
 
 <div id="aboutMe" class="infoPop">
-    <h4>This is a sample title</h4>
+    <h4>Who I Am</h4>
     <p>This is some sample content with a lot of stuff to say don't you know!
     Lets just see if it actually works the way I intended it to.  That would be
      awesome.</p>
@@ -259,17 +262,24 @@
 </div>
 <div id="resume" class="infoPop">
     <h4>Resume</h4>
-    <p>Info about Resume</p>
+    <p>If you would like a copy of my resume, please click 
+    <strong><a id="resumeLink" target="_blank" href="https://drive.google.com/open?id=0B7So04rNCiX4cGRfNnNqcVpYY0E">here</a></strong>.
+    I keep it it updated with current job knowledge, as well as personal knowledge
+    as I continue to learn more.</p>
     <button type="button" class="close" id="resumeClose">x</button>
 </div>
 <div id="brickGame" class="infoPop">
     <h4>Brick Game</h4>
-    <p>Brick Game information</p>
+    <p>This is my first game that I am currently working on.
+    Soon, when it is at least somewhat playable, I will be posting 
+    a link for anyone wanting to play!</p>
     <button type="button" class="close" id="brickGameClose">x</button>
 </div>
 <div id="mods" class="infoPop">
     <h4>Mods</h4>
-    <p>Mods I've made</p>
+    <p>I have been playing games my whole life, and I will soon be 
+    making mods to make my experience more fun!  Any mods I make I will
+     post here and make available to anyone willing to give them a try.</p>
     <button type="button" class="close" id="modsClose">x</button>
 </div>
 
@@ -323,7 +333,7 @@
         
     });
     
-    //close about me
+    //close buttons
         var aboutClose = document.getElementById("aboutClose");
             aboutClose.addEventListener("click", function(){
                 aboutMe.style.display="none";
